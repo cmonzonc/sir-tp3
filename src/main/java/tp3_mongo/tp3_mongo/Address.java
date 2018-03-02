@@ -7,19 +7,10 @@ public class Address {
 	
 	@Id
 	ObjectId id;
-    Address address;
     String street;
     String city;
     String postCode;
     String country;
-
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
 
     public String getCity() {
         return city;
