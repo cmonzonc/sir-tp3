@@ -23,6 +23,9 @@ public class Main {
 
     }
 
+    /**
+     * Function to create objects and storage the information with MongoDB
+     */
     public void runMongoQueries() {
         Morphia morphia = new Morphia();
         MongoClient mongo = new MongoClient();
@@ -52,6 +55,9 @@ public class Main {
         }
     }
 
+    /**
+     * Basic function to test the Redis SET command 
+     */
     public void runRedisDummy() {
         Jedis jedis = new Jedis("localhost");
 
@@ -62,6 +68,9 @@ public class Main {
         System.err.println(value);
     }
 
+    /**
+     * Basic function to test the Redis counter 
+     */
     public void runRedisCounter() {
         Jedis jedis = new Jedis("localhost");
 
@@ -70,6 +79,10 @@ public class Main {
         System.out.println(jedis.get("counter"));
     }
 
+    /**
+     * @throws InterruptedException
+     * Basic function to test the functions INCRT and EXPIRE
+     */
     public void runRedisCache() throws InterruptedException {
         String cacheKey = "cachekey";
         Jedis jedis = new Jedis("localhost");
@@ -95,6 +108,9 @@ public class Main {
         System.out.println("Expired Key:" + jedis.get(cacheKey));
     }
 
+    /**
+     * Basic function to test the storage of a SET of non-duplicated values
+     */
     public void runRedisCacheStorage() {
         String cacheKey = "languages";
         Jedis jedis = new Jedis("localhost");
