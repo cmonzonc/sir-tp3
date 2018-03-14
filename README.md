@@ -14,6 +14,9 @@ Redis permettre stocker d'information du type clé-valeur en memoire RAM, contra
 - GETSET pour obtenir atomiquement la valeur de compteur actuelle et la réinitialiser à zéro. Par exemple, il est possible d'enregistrer de sessions d'utilisateur sur un site internet. 
 - DECR ou INCRBY, pour gérer des valeurs qui peuvent être plus ou moins importantes selon les opérations effectuées par l'utilisateur. Imaginez par exemple le score de différents utilisateurs dans un jeu en ligne.
 
+### Design 
+
+![model3](https://github.com/cmonzonc/sir-tp3/blob/master/resources/Class%20diagram%20TP3.png?raw=true)
 
 ## Author
 
